@@ -1,4 +1,7 @@
 
+
+
+
 class Character {
 private:
     int _strength;
@@ -10,7 +13,7 @@ private:
      
      
      bool positiveCondition(int number){
-        if(number > 0){
+        if(number > 0 && number < 20){
             return true;
         }
         return false;
@@ -80,5 +83,9 @@ public:
             if(positiveCondition(strength)){
                 _strength = strength;
             }
+        }
+
+        int mapNumber(int number){
+            return (number/2 -5);
         }
     };
